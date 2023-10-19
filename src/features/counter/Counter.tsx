@@ -1,6 +1,4 @@
 import { useState } from "react";
-
-import { useAppDispatch, useAppSelector } from "../../app/hooks";
 import {
   decrement,
   increment,
@@ -9,6 +7,7 @@ import {
   incrementIfOdd,
   selectCount,
 } from "./counterSlice";
+import { useAppDispatch, useAppSelector } from "../../app/hooks";
 
 export default function Counter(): JSX.Element {
   const count = useAppSelector(selectCount);

@@ -1,37 +1,28 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import Home from "./pages/Home/";
-import Login from "./pages/auth/Login";
-import Signup from "./pages/auth/Register";
-import VerifyEmail from "./pages/auth/VerifyEmail";
-import Transactions from "./pages/Transactions";
+import Profile from "./pages/profile";
 
-import ProtectedRoute from "./ProtectedRoute";
 import NotFound from "./pages/Error/NotFound";
-import Users from "./pages/users";
+import Activities from "./pages/Activities";
+import Earnings from "./pages/Earnings";
+import Verification from "./pages/Verification";
+import Settings from "./pages/Settings";
+import AdminAuth from "./features/Admin/AdminAuth";
+import AuthUser from "./pages/auth/AuthUser";
 
 const AppRoutes = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/signup" element={<Signup />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/verify-email" element={<VerifyEmail />} />
-        <Route path="/" element={<Home />} />
-        <Route path="/transactions" element={<Transactions />} />
-        <Route path="/users" element={<Users />} />
+        <Route path="/" element={<AuthUser />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/admin" element={<AdminAuth />} />
+        <Route path="/activities" element={<Activities />} />
+        <Route path="/earnings" element={<Earnings />} />
+        <Route path="/verification" element={<Verification />} />
+        <Route path="/settings" element={<Settings />} />
 
-        {/* Protected Routes */}
-        {/* <Route
-          path="/"
-          element={
-            <ProtectedRoute>
-              <Home />
-            </ProtectedRoute>
-          }
-        /> */}
-
-        {/* Broken Link */}
         <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
