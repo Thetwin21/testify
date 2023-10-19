@@ -2,7 +2,6 @@ import HeadNav from "../components/general/headnav";
 import Sidebar from "../components/general/sidebar";
 interface dashboard {
   children?: any;
-
   current: number;
 }
 const DashboardLayout = ({ children, current }: dashboard) => {

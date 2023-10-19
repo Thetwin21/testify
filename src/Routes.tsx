@@ -4,7 +4,6 @@ import Home from "./pages/Home/";
 import Login from "./pages/auth/Login";
 import Signup from "./pages/auth/Register";
 import VerifyEmail from "./pages/auth/VerifyEmail";
-import Profile from "./pages/profile";
 import Transactions from "./pages/Transactions";
 
 import ProtectedRoute from "./ProtectedRoute";
@@ -31,14 +30,6 @@ const AppRoutes = () => {
             </ProtectedRoute>
           }
         /> */}
-        <Route
-          path="/profile"
-          element={
-            <ProtectedRoute>
-              <Profile />
-            </ProtectedRoute>
-          }
-        />
 
         {/* Broken Link */}
         <Route path="*" element={<NotFound />} />

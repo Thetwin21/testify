@@ -1,6 +1,6 @@
 import AppRoutes from "./Routes";
 
-function App(): JSX.Element {
+function App() {
   return (
     <div className="">
       <AppRoutes />
